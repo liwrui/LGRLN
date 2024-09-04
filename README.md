@@ -21,13 +21,13 @@ Coming Soon in later septemper 2024!
 
 ## Run
 + train
-  `python tools/train.py --cfg configs/video-summarization/SumMe/SPELL_default.yaml --split 4`
-  `python tools/train.py --cfg configs/video-summarization/TVSum/SPELL_default.yaml --split 4`
-  `python tools/train_videoxum.py --cfg configs/video-summarization/VideoXum/SPELL_default.yaml --split 4`
+  ```python tools/train.py --cfg configs/video-summarization/SumMe/SPELL_default.yaml --split 4```
+  ```python tools/train.py --cfg configs/video-summarization/TVSum/SPELL_default.yaml --split 4```
+  ```python tools/train_videoxum.py --cfg configs/video-summarization/VideoXum/SPELL_default.yaml --split 4```
 + eval
-  `python tools/eval.py --exp_name SPELL_VS_SumMe_default --eval_type VS_max --split 4`
-  `python tools/eval.py --exp_name SPELL_VS_TVSum_default --eval_type VS_avg --split 4`
-  `python tools/eval_videoxum.py --exp_name SPELL_VS_VideoXum_default --eval_type VS_avg --split 4`
+  ```python tools/eval.py --exp_name SPELL_VS_SumMe_default --eval_type VS_max --split 4```
+  ```python tools/eval.py --exp_name SPELL_VS_TVSum_default --eval_type VS_avg --split 4```
+  ```python tools/eval_videoxum.py --exp_name SPELL_VS_VideoXum_default --eval_type VS_avg --split 4```
 
 
 
