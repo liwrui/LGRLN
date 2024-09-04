@@ -1,4 +1,4 @@
-# SceneDreamer360: Text-Driven 3D-Consistent Scene Generation with Panoramic Gaussian Splatting
+# Language-Guided Graph Representation Learning for Video Summarization
 
 <div align="center">
 
