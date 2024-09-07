@@ -69,17 +69,27 @@ Coming Soon in later septemper 2024!
   ```
 ### pretreat SumMe and TVSum
 + run
-    ```python data/generate_temporal_graphs.py --dataset SumMe --features eccv16_dataset_summe_google_pool5 --tauf 10 --skip_factor 0```
-    ```python data/generate_temporal_graphs.py --dataset TVSum --features eccv16_dataset_tvsum_google_pool5 --tauf 5 --skip_factor 0```
+    ```
+      python data/generate_temporal_graphs.py --dataset SumMe --features eccv16_dataset_summe_google_pool5 --tauf 10 --skip_factor 0
+    ```
+    ```
+      python data/generate_temporal_graphs.py --dataset TVSum --features eccv16_dataset_tvsum_google_pool5 --tauf 5 --skip_factor 0
+    ```
 + videoxum don't need pretreatment
 
 ### training
 + if just want to eval, download parameters first and skip this chaptar
 + train on SumMe and TVSum
-    ```python tools/train.py --cfg configs/SumMe/SPELL_default.yaml --split 4```
-    ```python tools/train.py --cfg configs/TVSum/SPELL_default.yaml --split 4```
+    ```
+      python tools/train.py --cfg configs/SumMe/SPELL_default.yaml --split 4
+    ```
+    ```
+      python tools/train.py --cfg configs/TVSum/SPELL_default.yaml --split 4
+    ```
 + train on VideoXum
-    ```python tools/train_videoxum.py --cfg configs/VideoXum/SPELL_default.yaml --split 4```
+    ```
+      python tools/train_videoxum.py --cfg configs/VideoXum/SPELL_default.yaml --split 4
+    ```
 
 ### eval
   | dataset | f1 | tau  |  rho  |
@@ -88,9 +98,15 @@ Coming Soon in later septemper 2024!
   | TVSum   | 58.3  | 0.30 | 0.43 |
   | VideoXum | 32.1 | 0.19 | 0.26 |
   
-  ```python tools/eval.py --exp_name SPELL_VS_SumMe_default --eval_type VS_max --split 4```
-  ```python tools/eval.py --exp_name SPELL_VS_TVSum_default --eval_type VS_avg --split 4```
-  ```python tools/eval_videoxum.py --exp_name SPELL_VS_VideoXum_default --eval_type VS_avg --split 4```
+  ``` 
+  python tools/eval.py --exp_name SPELL_VS_SumMe_default --eval_type VS_max --split 4
+  ```
+  ```
+  python tools/eval.py --exp_name SPELL_VS_TVSum_default --eval_type VS_avg --split 4
+  ```
+  ```
+  python tools/eval_videoxum.py --exp_name SPELL_VS_VideoXum_default --eval_type VS_avg --split 4
+  ```
 
 
 ### bugs
