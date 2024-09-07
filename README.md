@@ -19,11 +19,13 @@ With the rapid growth of video content on social media platforms, video summariz
 ## Codes
 Coming Soon in later septemper 2024!
 
-## Run
+## Experment
 
-### init project
-+ download this project by
-  ```git clone https://github.com/liwrui/LGRLN.git```
+### Initialize project files
++ download this project using git
+  ```
+  git clone https://github.com/liwrui/LGRLN.git
+  ```
 + download TVSum and SumMe following https://github.com/IntelLabs/GraVi-T/blob/main/docs/GETTING_STARTED_VS.md
 + download VideoXum from https://huggingface.co/datasets/jylins/videoxum
 + if want to download downloaded parameters, place them to ./results/
