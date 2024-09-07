@@ -26,9 +26,16 @@ Coming Soon in later septemper 2024!
   ```
   git clone https://github.com/liwrui/LGRLN.git
   ```
-+ download TVSum and SumMe following https://github.com/IntelLabs/GraVi-T/blob/main/docs/GETTING_STARTED_VS.md
-+ download VideoXum from https://huggingface.co/datasets/jylins/videoxum
-+ if want to download downloaded parameters, place them to ./results/
++ download datasets to ./data/
+  + download TVsum and SumMe following the steps of
+    ```
+    https://github.com/IntelLabs/GraVi-T/blob/main/docs/GETTING_STARTED_VS.md
+    ```
+  + download VideoXum from
+     ```
+      https://huggingface.co/datasets/jylins/videoxum
+     ```
++ If you want to download model parameters, put them in ./results/
 + the final struture should be:
   ```
   |-- LGRLN
