@@ -78,6 +78,7 @@ Coming Soon in later septemper 2024!
   |  SumMe | 54.7   | 0.14 | 0.19 |
   | TVSum   | 58.3  | 0.30 | 0.43 |
   | VideoXum | 32.1 | 0.19 | 0.26 |
+  
   ```python tools/eval.py --exp_name SPELL_VS_SumMe_default --eval_type VS_max --split 4```
   ```python tools/eval.py --exp_name SPELL_VS_TVSum_default --eval_type VS_avg --split 4```
   ```python tools/eval_videoxum.py --exp_name SPELL_VS_VideoXum_default --eval_type VS_avg --split 4```
