@@ -18,16 +18,16 @@ With the rapid growth of video content on social media platforms, video summariz
 
 ## Experment
 
-### 📑 Download files
+### 📑 Download 
 + download <b>LGRLN</b> using git
   ```
   git clone https://github.com/liwrui/LGRLN.git
   ```
 + download <b>datasets</b> to ./data/
-  + download TVsum and SumMe following the steps of [TVSum & SumMe](https://github.com/IntelLabs/GraVi-T/blob/main/docs/GETTING_STARTED_VS.md)
-  + download VideoXum from [VideoXum](https://huggingface.co/datasets/jylins/videoxum)
-+ If you want to download model parameters, put them in ./results/
-+ the final struture should be:
+  + download <b>TVsum</b> and <b>SumMe</b> from [TVSum & SumMe](https://github.com/IntelLabs/GraVi-T/blob/main/docs/GETTING_STARTED_VS.md)
+  + download <b>VideoXum</b> from [VideoXum](https://huggingface.co/datasets/jylins/videoxum)
++ If you want to download model parameters, put them in <b>./results/</b>
++ the final dictionary struture should be:
   ```
   |-- LGRLN
     |-- configs
@@ -58,52 +58,52 @@ With the rapid growth of video content on social media platforms, video summariz
       |-- SPELL_VS_VideXum_default
     |-- tools
   ```
-### 🛠️ pretreat SumMe and TVSum
-+ run
+### 🛠️ Pretreatment
++ split <b>TVSum</b> and <b>SumMe</b> and generate graphs offline by running:
     ```
       python data/generate_temporal_graphs.py --dataset SumMe --features eccv16_dataset_summe_google_pool5 --tauf 10 --skip_factor 0
     ```
     ```
       python data/generate_temporal_graphs.py --dataset TVSum --features eccv16_dataset_tvsum_google_pool5 --tauf 5 --skip_factor 0
     ```
-+ videoxum doesn't need pretreatment
++ <b>videoxum</b> doesn't need splitting, and its dataloader will generate graphs online
 
-### 🚀training
-+ if just want to eval, download parameters first and skip this chaptar
-+ train on SumMe
+### 🚀Training
++ training on <b>SumMe</b>
     ```
       python tools/train.py --cfg configs/SumMe/SPELL_default.yaml --split 4
     ```
-+ train on TVSum
++ training on <b>TVSum</b>
     ```
       python tools/train.py --cfg configs/TVSum/SPELL_default.yaml --split 4
     ```
-+ train on VideoXum
++ training on <b>VideoXum</b>
     ```
       python tools/train_videoxum.py --cfg configs/VideoXum/SPELL_default.yaml --split 4
     ```
 
-### 👀 eval
+### 👀Evaluation
++ evaluation on <b>SumMe</b>
+  ``` 
+  python tools/eval.py --exp_name SPELL_VS_SumMe_default --eval_type VS_max --split 4
+  ```
++ evaluation on <b>TVSum</b>
+  ```
+  python tools/eval.py --exp_name SPELL_VS_TVSum_default --eval_type VS_avg --split 4
+  ```
++ evaluation on <b>VideoXum</b>
+  ```
+  python tools/eval_videoxum.py --exp_name SPELL_VS_VideoXum_default --eval_type VS_avg --split 4
+  ```
++ the final evaluation results will be close to:
   | dataset | f1 | tau  |  rho  |
   | --- | ----- | ---- |  -----  |
   |  SumMe | 54.7   | 0.14 | 0.19 |
   | TVSum   | 58.3  | 0.30 | 0.43 |
   | VideoXum | 32.1 | 0.19 | 0.26 |
-+ eval on SumMe
-  ``` 
-  python tools/eval.py --exp_name SPELL_VS_SumMe_default --eval_type VS_max --split 4
-  ```
-+ eval on TVSum
-  ```
-  python tools/eval.py --exp_name SPELL_VS_TVSum_default --eval_type VS_avg --split 4
-  ```
-+ eval on VideoXum
-  ```
-  python tools/eval_videoxum.py --exp_name SPELL_VS_VideoXum_default --eval_type VS_avg --split 4
-  ```
 
-## 📦parameters
-+ you can download them from
+## 📦Model Zoo
++ you can download trained parameters from
   | url | password | 
   | --- | ----- |
   |  https://pan.baidu.com/s/1vRphKVBYuIxBzyg5xoGn8w | tagc |
