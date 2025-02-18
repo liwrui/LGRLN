@@ -101,12 +101,19 @@ With the rapid growth of video content on social media platforms, video summariz
   |  SumMe | 54.7   | 0.14 | 0.19 |
   | TVSum   | 58.3  | 0.30 | 0.43 |
   | VideoXum | 32.1 | 0.19 | 0.26 |
++ The absolute advantage of <b>LGRLN</b> is its parameter count
+  | model | parameters(M) | Total (MB) |
+  | --- | ----- | ---- |
+  | PGL-SUM | 36.02 | 55.17 |
+  | A2Summ  | 9.60  | 50.56 |
+  | <b>LGRLN</b> | 2.97 | 13.96 |
 
 ## 📦Model Zoo
-+ you can download trained parameters from
++ you can download checkpoints from
   | url | password | 
   | --- | ----- |
   |  https://pan.baidu.com/s/1vRphKVBYuIxBzyg5xoGn8w | tagc |
+
 
 
 
