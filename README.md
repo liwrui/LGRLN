@@ -109,10 +109,11 @@ Coming Soon in later septemper 2024!
   ```
 
 
-### bugs
-+ if encountered an error with ./gravit/, modify that folder from https://github.com/IntelLabs/GraVi-T/tree/main/gravit
-
-
+## parameters
++ you can download them from
+  | url | password | 
+  | --- | ----- |
+  |  https://pan.baidu.com/s/1vRphKVBYuIxBzyg5xoGn8w | tagc |
 
 
 
